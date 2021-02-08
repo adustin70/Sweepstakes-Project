@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MySweepStakes
 {
-    class IContestant
+    static class IContestant
     {
         public static string GetFirstName()
         {
