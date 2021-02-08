@@ -13,6 +13,8 @@ namespace MySweepStakes
         public MarketingFirm(ISweepstakesManager manager)
         {
             this._manager = manager;
+            manager = new SweepstakeStackManager();
+            _manager = new SweepstakesQueueManager();
         }
 
         public void CreateSweepstakes()
