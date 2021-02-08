@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace MySweepStakes
 {
-    class SweepstakesQueueManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
+        Queue<Sweepstakes> queue = new Queue<Sweepstakes>();
+
+        public override void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            queue.Enqueue(sweepstakes);
+        }
+
+        public override Sweepstakes GetSweepstakes()
+        {
+            return queue.Dequeue();
+        }
     }
 }
