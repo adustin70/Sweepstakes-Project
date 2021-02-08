@@ -15,10 +15,10 @@ namespace MySweepStakes
 
         public void GetContestantInfo()
         {
-            ContestantFirstName = IContestant.GetFirstName();
-            ContestantLastName = IContestant.GetLastName();
-            ContestantEmail = IContestant.GetUserEmail();
-            ContestantRegistrationNumber = IContestant.GetRegistrationNumber();
+            ContestantFirstName = UserInterface.GetFirstName();
+            ContestantLastName = UserInterface.GetLastName();
+            ContestantEmail = UserInterface.GetUserEmail();
+            ContestantRegistrationNumber = UserInterface.GetRegistrationNumber();
         }
     }
 }
