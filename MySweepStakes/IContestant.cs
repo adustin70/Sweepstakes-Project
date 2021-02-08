@@ -8,19 +8,36 @@ namespace MySweepStakes
 {
     class IContestant
     {
-        public string ContestantFirstName { get; set; }
-        public string ContestantLastName { get; set; }
-        public string ContestantEmail { get; set; }
-        public int ContestantRegistation { get; set; }
-
-        public IContestant(string firstName, string lastName, string eMail, int registrationNumber)
+        public static string GetFirstName()
         {
-            this.ContestantFirstName = firstName;
-            this.ContestantLastName = lastName;
-            this.ContestantEmail = eMail;
-            this.ContestantRegistation = registrationNumber;
+            string userInput;
+            Console.WriteLine("Please enter your first name");
+            userInput = Console.ReadLine();
+            return userInput;
         }
 
+        public static string GetLastName()
+        {
+            string userInput;
+            Console.WriteLine("Please enter your last name");
+            userInput = Console.ReadLine();
+            return userInput;
+        }
 
+        public static string GetUserEmail()
+        {
+            string userInput;
+            Console.WriteLine("Please enter your email");
+            userInput = Console.ReadLine();
+            return userInput;
+        }
+
+        public static int GetRegistrationNumber()
+        {
+            int userInput;
+            Console.WriteLine("Please enter your resgistration number");
+            userInput = Int32.Parse(Console.ReadLine());
+            return userInput;
+        }
     }
 }
