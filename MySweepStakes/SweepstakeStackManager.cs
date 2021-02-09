@@ -10,12 +10,12 @@ namespace MySweepStakes
     {
         Stack<Sweepstakes> stack = new Stack<Sweepstakes>();
 
-        public override void InsertSweepstakes(Sweepstakes sweepstakes)
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
             stack.Push(sweepstakes);
         }
 
-        public override Sweepstakes GetSweepstakes()
+        public Sweepstakes GetSweepstakes()
         {
             return stack.Pop();
         }
