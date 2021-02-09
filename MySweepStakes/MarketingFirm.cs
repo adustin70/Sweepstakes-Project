@@ -13,7 +13,8 @@ namespace MySweepStakes
         public MarketingFirm(ISweepstakesManager manager)
         {
             this._manager = manager;
-        }
+        }// I'm using constructor dependency injection here so that you can pass in the object needed in this case Stack or Queue
+        // This allows for more flexability as well as easier testing
 
         public void CreateSweepstakes()
         {
