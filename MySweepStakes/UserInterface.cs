@@ -47,7 +47,23 @@ namespace MySweepStakes
                     Console.WriteLine("Invalid input");
                     return AskToEnterAnotherContestant();
             }
+        }
 
+        public static bool AskForStackOrQueue()
+        {
+            Console.WriteLine("Would you like a Stack or Queue to manage your sweepstakes objects?\n");
+            Console.WriteLine("Please enter Stack or Queue:");
+            string input = Console.ReadLine().ToLower();
+            switch (input)
+            {
+                case "stack":
+                    return true;
+                case "queue":
+                    return true;
+                default:
+                    Console.WriteLine("Invalid input");
+                    return AskForStackOrQueue();
+            }
         }
     }
 }
