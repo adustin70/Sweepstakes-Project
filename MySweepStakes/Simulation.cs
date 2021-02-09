@@ -13,7 +13,7 @@ namespace MySweepStakes
         //  Which will create a new instance of MarketingFirm with eiter a Stack or Queue manager
             if (UserInterface.AskForStackOrQueue() == true)
             {
-                ISweepstakesManager manager = new SweepstakeStackManager();
+                ISweepstakesManager manager = new SweepstakesStackManager();
                 MarketingFirm marketingFirm = new MarketingFirm(manager);
                 marketingFirm.CreateSweepstakes();
             }

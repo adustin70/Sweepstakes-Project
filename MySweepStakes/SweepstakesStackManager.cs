@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MySweepStakes
 {
-    class SweepstakeStackManager : ISweepstakesManager
+    class SweepstakesStackManager : ISweepstakesManager
     {
         Stack<Sweepstakes> stack;
 
