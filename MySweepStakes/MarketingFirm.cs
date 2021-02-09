@@ -18,9 +18,8 @@ namespace MySweepStakes
         public void CreateSweepstakes()
         {
             Contestant contestant = new Contestant();
+            Sweepstakes sweepstakes = new Sweepstakes("Your Sweepstakes name");
             contestant.GetContestantInfo();
-
-            Sweepstakes sweepstakes = new Sweepstakes(contestant.ContestantFirstName);
             sweepstakes.RegisterContestant(contestant);
             sweepstakes.PrintContestantInfo(contestant);
         }
