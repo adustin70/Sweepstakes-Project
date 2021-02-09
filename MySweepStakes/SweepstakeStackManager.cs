@@ -8,10 +8,11 @@ namespace MySweepStakes
 {
     class SweepstakeStackManager : ISweepstakesManager
     {
-        Stack<Sweepstakes> stack = new Stack<Sweepstakes>();
+        Stack<Sweepstakes> stack;
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
+            stack = new Stack<Sweepstakes>();
             stack.Push(sweepstakes);
         }
 
