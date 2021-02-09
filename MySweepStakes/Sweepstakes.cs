@@ -40,6 +40,7 @@ namespace MySweepStakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
+            contestant = PickWinner();
             foreach (KeyValuePair<int, Contestant> theContestant in contestants)
             {
                 if (contestant == theContestant.Value)

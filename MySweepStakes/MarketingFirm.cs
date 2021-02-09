@@ -22,7 +22,6 @@ namespace MySweepStakes
 
             Sweepstakes sweepstakes = new Sweepstakes(contestant.ContestantFirstName);
             sweepstakes.RegisterContestant(contestant);
-            sweepstakes.PickWinner();
             sweepstakes.PrintContestantInfo(contestant);
         }
     }
