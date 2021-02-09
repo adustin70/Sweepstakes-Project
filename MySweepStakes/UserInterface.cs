@@ -31,13 +31,5 @@ namespace MySweepStakes
             userInput = Console.ReadLine();
             return userInput;
         }
-
-        public static int GetRegistrationNumber()
-        {
-            int userInput;
-            Console.WriteLine("Please enter your resgistration number");
-            userInput = Int32.Parse(Console.ReadLine());
-            return userInput;
-        }
     }
 }

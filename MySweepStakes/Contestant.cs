@@ -18,7 +18,6 @@ namespace MySweepStakes
             ContestantFirstName = UserInterface.GetFirstName();
             ContestantLastName = UserInterface.GetLastName();
             ContestantEmail = UserInterface.GetUserEmail();
-            ContestantRegistrationNumber = UserInterface.GetRegistrationNumber();
         }
     }
 }
