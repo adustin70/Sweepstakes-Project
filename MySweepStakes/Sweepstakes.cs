@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MySweepStakes
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
         Dictionary<int, Contestant> contestants;
         public string Name { get; set; }
@@ -18,7 +18,7 @@ namespace MySweepStakes
             contestants = new Dictionary<int, Contestant>();
         }
 
-        public void RegisterContestant(Contestant contestant)
+        void RegisterContestant(Contestant contestant)
         {
             if (contestants.Count == 0)
             {
@@ -36,7 +36,7 @@ namespace MySweepStakes
             }
         }
 
-        public Contestant PickWinner()
+        Contestant PickWinner()
         {
             Random randomKey = new Random();
             int key = randomKey.Next(contestants.Count);
@@ -49,7 +49,7 @@ namespace MySweepStakes
             return null;
         }
 
-        public void PrintContestantInfo(Contestant contestant)
+        void PrintContestantInfo(Contestant contestant)
         {
             contestant = PickWinner();
             foreach (KeyValuePair<int, Contestant> theContestant in contestants)
