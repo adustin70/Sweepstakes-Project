@@ -10,6 +10,7 @@ namespace MySweepStakes
     {
         Dictionary<int, Contestant> contestants;
         public string Name { get; set; }
+        int key = 0;
 
         public Sweepstakes(string name)
         {
@@ -19,10 +20,9 @@ namespace MySweepStakes
 
         public void RegisterContestant(Contestant contestant)
         {
-            for (int key = 0; key < contestants.Count; key++)
-            {
-                contestants.Add(key, contestant);
-            }
+            key++;
+            contestants.Add(key, contestant);
+            contestant.ContestantRegistrationNumber = key;            
         }
 
         public Contestant PickWinner()
@@ -43,7 +43,7 @@ namespace MySweepStakes
             foreach (KeyValuePair<int, Contestant> theContestant in contestants)
             {
                 if (contestant == theContestant.Value)
-                Console.WriteLine(theContestant.Key + "-" + theContestant.Value);
+                Console.WriteLine(theContestant.Key + "-" + contestant.ContestantLastName + "," + contestant.ContestantFirstName + "\n" + contestant.ContestantEmail);
             }
         }
     }
