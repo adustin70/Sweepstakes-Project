@@ -19,5 +19,13 @@ namespace MySweepStakes
             ContestantLastName = UserInterface.GetLastName();
             ContestantEmail = UserInterface.GetUserEmail();
         }
+
+        public void AddNextContestant()
+        {
+            if (UserInterface.AskToEnterAnotherContestant() == true)
+            {
+                GetContestantInfo();
+            }
+        }
     }
 }

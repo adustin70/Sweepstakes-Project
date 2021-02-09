@@ -8,9 +8,10 @@ namespace MySweepStakes
 {
     public static class UserInterface
     {
+        static string userInput;
+
         public static string GetFirstName()
         {
-            string userInput;
             Console.WriteLine("Please enter your first name");
             userInput = Console.ReadLine();
             return userInput;
@@ -18,7 +19,6 @@ namespace MySweepStakes
 
         public static string GetLastName()
         {
-            string userInput;
             Console.WriteLine("Please enter your last name");
             userInput = Console.ReadLine();
             return userInput;
@@ -26,10 +26,28 @@ namespace MySweepStakes
 
         public static string GetUserEmail()
         {
-            string userInput;
             Console.WriteLine("Please enter your email");
             userInput = Console.ReadLine();
             return userInput;
+        }
+
+        public static bool AskToEnterAnotherContestant()
+        {
+            Console.WriteLine("Would you like to enter another contestant?");
+            string input = Console.ReadLine().ToLower();
+            switch (input)
+            {
+                case "y":
+                case "yes":
+                    return true;
+                case "n":
+                case "no":
+                    return false;
+                default:
+                    Console.WriteLine("Invalid input");
+                    return AskToEnterAnotherContestant();
+            }
+
         }
     }
 }
