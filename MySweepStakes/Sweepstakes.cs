@@ -20,9 +20,20 @@ namespace MySweepStakes
 
         public void RegisterContestant(Contestant contestant)
         {
-            key++;
-            contestants.Add(key, contestant);
-            contestant.ContestantRegistrationNumber = key;            
+            if (contestants.Count == 0)
+            {
+                key++;
+                contestants.Add(key, contestant);
+                contestant.ContestantRegistrationNumber = key;
+            }
+
+            while (UserInterface.AskToEnterAnotherContestant() == true)
+            {
+                contestant.GetContestantInfo();
+                key++;
+                contestants.Add(key, contestant);
+                contestant.ContestantRegistrationNumber = key;
+            }
         }
 
         public Contestant PickWinner()
