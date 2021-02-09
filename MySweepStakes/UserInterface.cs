@@ -59,7 +59,7 @@ namespace MySweepStakes
                 case "stack":
                     return true;
                 case "queue":
-                    return true;
+                    return false;
                 default:
                     Console.WriteLine("Invalid input");
                     return AskForStackOrQueue();
