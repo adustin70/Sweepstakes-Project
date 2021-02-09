@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MySweepStakes
 {
-    class Contestant
+    public class Contestant
     {
         public string ContestantFirstName { get; set; }
         public string ContestantLastName { get; set; }

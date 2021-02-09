@@ -18,7 +18,7 @@ namespace MySweepStakes
             contestants = new Dictionary<int, Contestant>();
         }
 
-        void RegisterContestant(Contestant contestant)
+        public void RegisterContestant(Contestant contestant)
         {
             if (contestants.Count == 0)
             {
@@ -36,7 +36,7 @@ namespace MySweepStakes
             }
         }
 
-        Contestant PickWinner()
+        public Contestant PickWinner()
         {
             Random randomKey = new Random();
             int key = randomKey.Next(contestants.Count);
@@ -49,7 +49,7 @@ namespace MySweepStakes
             return null;
         }
 
-        void PrintContestantInfo(Contestant contestant)
+        public void PrintContestantInfo(Contestant contestant)
         {
             contestant = PickWinner();
             foreach (KeyValuePair<int, Contestant> theContestant in contestants)
