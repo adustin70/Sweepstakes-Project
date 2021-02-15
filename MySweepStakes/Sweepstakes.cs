@@ -14,7 +14,7 @@ namespace MySweepStakes
 
         public Sweepstakes(string name)
         {
-            name = Name;
+            Name = name;
             contestants = new Dictionary<int, Contestant>();
         }
 
@@ -22,14 +22,6 @@ namespace MySweepStakes
         {
             if (contestants.Count == 0)
             {
-                key++;
-                contestants.Add(key, contestant);
-                contestant.ContestantRegistrationNumber = key;
-            }
-
-            while (UserInterface.AskToEnterAnotherContestant() == true)
-            {
-                contestant.GetContestantInfo();
                 key++;
                 contestants.Add(key, contestant);
                 contestant.ContestantRegistrationNumber = key;
@@ -51,12 +43,7 @@ namespace MySweepStakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
-            contestant = PickWinner();
-            foreach (KeyValuePair<int, Contestant> theContestant in contestants)
-            {
-                if (contestant == theContestant.Value)
-                Console.WriteLine(theContestant.Key + "-" + contestant.ContestantLastName + "," + contestant.ContestantFirstName + "\n" + contestant.ContestantEmail);
-            }
+                Console.WriteLine(contestant.ContestantLastName + "," + contestant.ContestantFirstName + ": " + contestant.ContestantEmail);
         }
     }
 }
