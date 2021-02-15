@@ -17,7 +17,7 @@ namespace MySweepStakes
                 MarketingFirm marketingFirm = new MarketingFirm(manager);
                 marketingFirm.CreateSweepstakes();
             }
-            else if (UserInterface.AskForStackOrQueue() == false)
+            else
             {
                 ISweepstakesManager manager = new SweepstakesQueueManager();
                 MarketingFirm marketingFirm = new MarketingFirm(manager);
