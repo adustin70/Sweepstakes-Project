@@ -8,16 +8,21 @@ namespace MySweepStakes
 {
     public class Contestant
     {
-        public string ContestantFirstName { get; set; }
-        public string ContestantLastName { get; set; }
-        public string ContestantEmail { get; set; }
-        public int ContestantRegistrationNumber { get; set; }
-
-        public void GetContestantInfo()
+        public string ContestantFirstName 
         {
-            ContestantFirstName = UserInterface.GetFirstName();
-            ContestantLastName = UserInterface.GetLastName();
-            ContestantEmail = UserInterface.GetUserEmail();
+            get { return ContestantFirstName; }
+            set { ContestantFirstName = UserInterface.GetUserInformation("Please enter your first name"); } 
         }
+        public string ContestantLastName
+        {
+            get { return ContestantLastName; }
+            set { ContestantLastName = UserInterface.GetUserInformation("Please enter you last name"); }
+        }
+        public string ContestantEmail 
+        {
+            get { return ContestantEmail; }
+            set { ContestantEmail = UserInterface.GetUserInformation("Please enter you Email address"); }
+        }
+        public int ContestantRegistrationNumber { get; set; }
     }
 }

@@ -10,27 +10,12 @@ namespace MySweepStakes
     {
         static string userInput;
 
-        public static string GetFirstName()
+        public static string GetUserInformation(string prompt)
         {
-            Console.WriteLine("Please enter your first name");
+            Console.WriteLine(prompt);
             userInput = Console.ReadLine();
             return userInput;
         }
-
-        public static string GetLastName()
-        {
-            Console.WriteLine("Please enter your last name");
-            userInput = Console.ReadLine();
-            return userInput;
-        }
-
-        public static string GetUserEmail()
-        {
-            Console.WriteLine("Please enter your email");
-            userInput = Console.ReadLine();
-            return userInput;
-        }
-
         public static bool AskToEnterAnotherContestant()
         {
             Console.WriteLine("Would you like to enter another contestant?");
